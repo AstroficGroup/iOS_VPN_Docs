@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTROFIC VPN - Documentation</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="icon.png" alt="ASTROFIC VPN" class="sidebar-logo">
+            <h1>ASTROFIC VPN</h1>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <li><a href="eula.html">EULA</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+    
+    <div class="main-content">
+        <div class="content">
+            <h1>ASTROFIC VPN</h1>
+            
+            <p>Welcome to ASTROFIC VPN documentation!</p>
+            
+            <h2>Legal Documents</h2>
+            
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <li><a href="eula.html">End User License Agreement (EULA)</a></li>
+            </ul>
+            
+            <hr>
+            
+            <p><strong>Last Updated:</strong> November 15, 2025</p>
+        </div>
+    </div>
+    
+    <script>
+        // Подсветка активной ссылки
+        (function() {
+            var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            var links = document.querySelectorAll('.sidebar-nav a');
+            links.forEach(function(link) {
+                var linkPage = link.getAttribute('href');
+                if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
